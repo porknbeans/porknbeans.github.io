@@ -1,0 +1,3 @@
+title: A HAML page
+filter: haml
+content: test.haml

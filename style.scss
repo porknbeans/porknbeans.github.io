@@ -1,5 +1,103 @@
+// Fonts
+@font-face {
+  font-family: 'GoudyStM';
+  src: url('fonts/GoudyStM.eot');
+  src: local('☺'),
+       url('fonts/GoudyStM.woff') format('woff'),
+       url('fonts/GoudyStM.ttf') format('truetype'),
+       url('fonts/GoudyStM.svg') format('svg');
+}
+@font-face {
+  font-family: 'Chunk';
+  src: url('fonts/Chunk.eot');
+  src: local('☺'),
+       url('fonts/Chunk.woff') format('woff'),
+       url('fonts/Chunk.ttf') format('truetype'),
+       url('fonts/Chunk.svg') format('svg');
+}
+@font-face {
+  font-family: 'Knewave';
+  src: url('fonts/Knewave.eot');
+  src: local('☺'),
+       url('fonts/Knewave.woff') format('woff'),
+       url('fonts/Knewave.ttf') format('truetype'),
+       url('fonts/Knewave.svg') format('svg');
+}
+@font-face {
+  font-family: 'Knewave-outline';
+  src: url('fonts/Knewave-outline.eot');
+  src: local('☺'),
+       url('fonts/Knewave-outline.woff') format('woff'),
+       url('fonts/Knewave-outline.ttf') format('truetype'),
+       url('fonts/Knewave-outline.svg') format('svg');
+}
+@font-face {
+  font-family: 'JustVector';
+  src: url('fonts/JustVector.eot');
+  src: local('☺'),
+       url('fonts/JustVector.woff') format('woff'),
+       url('fonts/JustVector.ttf') format('truetype'),
+       url('fonts/JustVector.svg') format('svg');
+}
+
+// Mixins
+@mixin pork {
+  font-family: "Chunk", sans-serif;
+  display: inline-block;
+
+  color: #c77;
+  -webkit-transform: scale(1.2) rotate(4deg);
+     -moz-transform: scale(1.2) rotate(4deg);
+      -ms-transform: scale(1.2) rotate(4deg);
+       -o-transform: scale(1.2) rotate(4deg);
+          transform: scale(1.2) rotate(4deg);
+
+  text-shadow: 0 0 3px rgba(0,0,0,0.5);
+}
+
+@mixin beans {
+  font-family: "Knewave", sans-serif;
+  display: inline-block;
+
+  color: #7c7;
+
+  -webkit-transform: scale(1.2) rotate(-3deg);
+     -moz-transform: scale(1.2) rotate(-3deg);
+      -ms-transform: scale(1.2) rotate(-3deg);
+       -o-transform: scale(1.2) rotate(-3deg);
+          transform: scale(1.2) rotate(-3deg);
+
+  text-shadow: 0 0 3px rgba(70,30,20,0.5);
+}
+
+@mixin googleplus {
+  display: none;
+}
+
 body {
-  font-family: sans-serif;
   margin: 100px;
   color: #bbb;
+
+  font-size: 200%;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: monospace;
+  em {
+    font-style: normal;
+    @include pork;
+  }
+  strong {
+    font-weight: normal;
+    @include beans;
+  }
+}
+
+a[href="https://plus.google.com/101285082840863600683"] {
+  @include googleplus;
+}
+
+// Center everything
+body {
+  text-align: center;
 }
