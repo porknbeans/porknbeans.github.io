@@ -21,6 +21,7 @@ CLEAN << SITE.existing
 
 task default: :build
 
+desc "Build the site. This is the default task."
 task build: SITE
 
 task :serve => :build do
